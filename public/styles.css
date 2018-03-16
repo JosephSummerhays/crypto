@@ -1,0 +1,50 @@
+:root {
+  --colorOne:red;
+  --colorTwo:blue;
+  --colorThree:green;
+  --sidePadding:30px;
+}
+h1 {
+ color: var(--colorOne);
+ text-align: center;
+
+}
+h2 {
+  color: var(--colorTwo);
+  font-size: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+body {
+background-color: var(--colorThree);
+
+}
+p {
+    font-family: sans-serif;
+    line-height: 35px;
+    padding-left:var(--sidePadding);
+    padding-right:var(--sidePadding);
+}
+
+.right {
+  float:right;
+  padding: 30px;
+  padding-left: var(--sidePadding);
+  width:30%;
+
+}
+
+.left {
+  float:left;
+  padding: 30px;
+  padding-right:var(--sidePadding);
+  width:30%;
+}
+
+.alignright{
+  text-align:right;
+
+}
+.center{
+  text-align: center;
+}
