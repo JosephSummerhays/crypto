@@ -7,20 +7,25 @@
             <title>cryptography</title>
         </head>
             <body>
+              <div id="app">
                 <h1>Welcome Hacker!</h1>
                 <h2 class="center">Here is your encoded message</h2>
-                <p>Encoded message Encoded message Encoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded message
-                </p>
+                <p>{{ crypted }}</p>
                 <h2 class="center">Here is the public key</h2>
-                <p>923479<br>
-                    Use prime Facterixation to decrypt it:
+                <p>{{ publicKey }}<br>
+                    Use prime Factorization to decrypt it:
                 </p>
-                    <form>
-                     <input type="text" name="fname">
-                        <button type="button">Submit</button>
+                    <form v-on:submit.prevent="decrypt">
+                      first Prime<input type="text" v-model="prime1">
+                      second Prime<input type="text" v-model="prime2">
+                      <button type="submit">Submit</button>
                     </form>
                 <h2 class="center">Here's your decrypted message</h2>
-                <p>Encoded message Encoded message Encoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded messageEncoded message Encoded message
-                </p>
+                <p>{{ decrypted }}</p>
+              </div>
             </body>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+            <script src="/stateManagement.js"></script>
+            <script src="/cryptApp.js"></script>
     </html>

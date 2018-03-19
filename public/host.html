@@ -1,20 +1,36 @@
-<Doctype ! html>
+<Doctype! html>
 
     <html>
     <head>
         <link rel="stylesheet" href="./styles.css"/>
         <title>cryptography</title>
     </head>
-        <body>
-            <h1>Welcome Host</h1>
-            <form>
+      <body>
+          <h1>Welcome Host</h1>
+          <div id="app">
+            <form v-on:submit.prevent="setUp">
                 Enter a message: <br>
-                <input type="text" name="fname"><br>
+                <input v-model="message" type="text" value="message"><br>
                 Enter two Prime Numbers<br>
-                Prime1:<input type="text" name="fname"><br>
-                Prime2:<input type="text" name="fname"><br>
-                <button type="button">Submit</button>
-
+                Prime1:<input v-model="prime1" type="text" value="prime1"><br>
+                Prime2:<input v-model="prime2" type="text" value="prime2"><br>
+                <button type="submit">Submit</button>
             </form>
-        </body>
+          </div>
+          <h1>Useful Tips</h1>
+          some characters have a hard time being transfered to the server. Here'
+          a few tips to avoid problems
+          <ul>
+            <li>only use ascii characters in the range from 48 to 128</li>
+            <li>spaces will be converted to underscores</li>
+            <li>inform me of any other errors and I'll post them here,
+              and you'll have the pleasure of knowing you changed the world
+              in a probably very insignificant way</li>
+
+          </ul>
+      </body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+      <script src="/stateManagement.js"></script>
+      <script src="/cryptApp.js"></script>
     <html>
